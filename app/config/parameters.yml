@@ -1,0 +1,14 @@
+parameters:
+  database_driver: pdo_mysql
+  database_host: 127.0.0.1
+  database_port: '3306'
+  database_name: saledb
+  database_user: root
+  database_password: '12345'
+  mailer_transport: smtp
+  mailer_host: 127.0.0.1
+  mailer_user: null
+  mailer_password: null
+  locale: en
+  secret: 8040268135e47b22048cd3c07cd98523b1e97abd
+  database_path: null

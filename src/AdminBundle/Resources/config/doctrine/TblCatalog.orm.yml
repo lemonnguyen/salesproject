@@ -1,0 +1,49 @@
+AdminBundle\Entity\TblCatalog:
+    type: entity
+    table: tbl_catalog
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+        description:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+        createDate:
+            type: date
+            nullable: true
+            column: create_date
+        delFlag:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: del_flag
+    manyToMany:
+        product:
+            targetEntity: TblProduct
+            cascade: {  }
+            mappedBy: null
+            inversedBy: catalog
+            joinTable:
+                name: tbl_catalog_product
+                joinColumns:
+                    -
+                        name: catalog_id
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    -
+                        name: product_id
+                        referencedColumnName: id
+            orderBy: null
+    lifecycleCallbacks: {  }

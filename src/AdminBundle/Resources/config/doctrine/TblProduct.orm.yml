@@ -1,0 +1,72 @@
+AdminBundle\Entity\TblProduct:
+    type: entity
+    table: tbl_product
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+        detail:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+        code:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+        mad:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+        brand:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+        image:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+        price:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+            default: '0'
+        miniDetail:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            column: mini_detail
+        delFlag:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: del_flag
+        createDate:
+            type: date
+            nullable: true
+            column: create_date
+    manyToMany:
+        catalog:
+            targetEntity: TblCatalog
+            cascade: {  }
+            mappedBy: product
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }

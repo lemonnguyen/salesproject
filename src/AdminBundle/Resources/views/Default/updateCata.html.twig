@@ -1,0 +1,59 @@
+{% extends 'AdminBundle::admin.html.twig' %} 
+
+{% block name %}
+<div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
+	<div class="page-header pull-left">
+		<div class="page-title">Catalog</div>
+	</div>
+	<ol class="breadcrumb page-breadcrumb pull-right">
+		<li><i class="fa fa-home"></i>&nbsp;<a
+			href="{{ url('admin_homepage') }}">Home</a>&nbsp;&nbsp;<i
+			class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+		<li class="hidden"><a href="#">Catalog</a>&nbsp;&nbsp;<i
+			class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+		<li class="active">Catalog</li>
+	</ol>
+	<div class="clearfix"></div>
+</div>
+{% endblock %} 
+
+{% block body %}
+<div class="col-lg-6">
+	<div class="panel-body pan">
+		<form action="{{ path('admin_updateCataProcess', {'id': model.id }) }}" class="form-horizontal" method="post">
+			<div class="form-body pal">
+				<div class="form-group">
+					<label for="inputName" class="col-md-3 control-label"> Catalog Name</label>
+					<div class="col-md-9">
+						<div class="input-icon right">
+							<i class="fa fa-desktop"></i> <input id="inputName" type="text" name="inputName"
+								placeholder="" value="{{ model.name }}" class="form-control" />
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="inputDesc" class="col-md-3 control-label">
+						Description</label>
+					<div class="col-md-9">
+						<div class="input-icon right">
+							<i class="fa fa-tag"></i>
+							<textarea id="inputDesc" rows="5" placeholder="" name="inputDesc" 
+								class="form-control">{{ model.description }}</textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-offset-5 col-md-6">
+					<a type="submit" class="btn btn-primary" name="submit" href="{{ url('admin_viewCatalog') }}" >Back</a>
+					<input type="submit" class="btn btn-primary" name="submit" value="Update Catalog" />
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+  		
+{% endblock %}

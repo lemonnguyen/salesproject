@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="SalesBundle\Entity\TblCatalog" table="tbl_catalog">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="name" type="string" column="name" length="50" nullable="false"/>
+    <field name="description" type="string" column="description" length="200" nullable="true"/>
+    <field name="createDate" type="date" column="create_date" nullable="true"/>
+    <field name="delFlag" type="boolean" column="del_flag" nullable="false"/>
+    <many-to-many field="product" target-entity="TblProduct" inversed-by="catalog">
+      <join-table name="tbl_catalog_product">
+        <join-columns>
+          <join-column name="catalog_id" referenced-column-name="id"/>
+        </join-columns>
+        <inverse-join-columns>
+          <join-column name="product_id" referenced-column-name="id"/>
+        </inverse-join-columns>
+      </join-table>
+    </many-to-many>
+  </entity>
+</doctrine-mapping>
