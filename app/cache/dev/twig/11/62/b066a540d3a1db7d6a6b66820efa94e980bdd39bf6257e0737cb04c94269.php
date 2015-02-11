@@ -35,7 +35,7 @@ class __TwigTemplate_1162b066a540d3a1db7d6a6b66820efa94e980bdd39bf6257e0737cb04c
         
         <link type=\"text/css\" rel=\"stylesheet\" href=\"http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700\">
     \t<link type=\"text/css\" rel=\"stylesheet\" href=\"http://fonts.googleapis.com/css?family=Oswald:400,700,300\">
-    \t<link type=\"text/css\" rel=\"stylesheet\" href=\"styles/jquery-ui-1.10.4.custom.min.css\">
+    \t<link type=\"text/css\" rel=\"stylesheet\" href=\"/styles/jquery-ui-1.10.4.custom.min.css\">
 \t    <link type=\"text/css\" rel=\"stylesheet\" href=\"/styles/font-awesome.min.css\">
 \t    <link type=\"text/css\" rel=\"stylesheet\" href=\"/styles/bootstrap.min.css\">
 \t    <link type=\"text/css\" rel=\"stylesheet\" href=\"/styles/animate.css\">

@@ -263,58 +263,60 @@ Management ";
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t<div class=\"box text-shadow\">
 \t\t\t\t\t\t\t\t\t\t<table class=\"demo-tbl col-md-12\">
+\t\t\t\t\t\t\t\t\t\t\t<!--<img/>-->
+                                            <td class=\"img\"><img src=\"images/thumbs/autumn-1.jpg\" alt=\"\" title=\"\"/></td>
 \t\t\t\t\t\t\t\t\t\t\t<!--<item>1</item>-->
 \t\t\t\t\t\t\t\t\t\t\t";
-        // line 203
+        // line 205
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["model"]) ? $context["model"] : $this->getContext($context, "model")));
         foreach ($context['_seq'] as $context["_key"] => $context["m"]) {
-            // line 204
+            // line 206
             echo "\t\t\t\t\t\t\t\t\t\t\t<tr class=\"tbl-item\">
 \t\t\t\t\t\t\t\t\t\t\t\t<!--<img/>-->
 \t\t\t\t\t\t\t\t\t\t\t\t<td class=\"col-md-1\">";
-            // line 206
+            // line 208
             echo twig_escape_filter($this->env, $this->getAttribute($context["m"], "id", array()), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t\t\t\t\t\t<!--<data></data>-->
 \t\t\t\t\t\t\t\t\t\t\t\t<td class=\"td-block col-md-10\"><p class=\"date\">";
-            // line 208
+            // line 210
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["m"], "createDate", array()), "m/d/Y"), "html", null, true);
-            // line 209
+            // line 211
             echo "</p>
 
 \t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"title\">";
-            // line 211
+            // line 213
             echo twig_escape_filter($this->env, $this->getAttribute($context["m"], "name", array()), "html", null, true);
             echo "</p>
 
 \t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"desc\">";
-            // line 213
+            // line 215
             echo twig_escape_filter($this->env, $this->getAttribute($context["m"], "detail", array()), "html", null, true);
             echo "</p></td>
 \t\t\t\t\t\t\t\t\t\t\t\t<td class=\"col-md-1\">";
-            // line 214
+            // line 216
             if (($this->getAttribute($context["m"], "delFlag", array()) == 0)) {
                 echo " <a
 \t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"label label-sm label-success\"
 \t\t\t\t\t\t\t\t\t\t\t\t\thref=\"";
-                // line 216
+                // line 218
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("admin_changeProductDel", array("id" => $this->getAttribute($context["m"], "id", array()))), "html", null, true);
                 echo "\">Activated</a>
 \t\t\t\t\t\t\t\t\t\t\t\t\t";
             } else {
-                // line 217
+                // line 219
                 echo " <a class=\"label label-sm label-danger\"
 \t\t\t\t\t\t\t\t\t\t\t\t\thref=\"";
-                // line 218
+                // line 220
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("admin_changeProductDel", array("id" => $this->getAttribute($context["m"], "id", array()))), "html", null, true);
                 echo "\">Disabled</a>
 \t\t\t\t\t\t\t\t\t\t\t\t\t";
             }
-            // line 220
+            // line 222
             echo "\t\t\t\t\t\t\t\t\t\t\t\t\t<p></p> <a class=\"label label-sm label-info\"
 \t\t\t\t\t\t\t\t\t\t\t\t\thref=\"";
-            // line 221
+            // line 223
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("admin_updateProduct", array("id" => $this->getAttribute($context["m"], "id", array()))), "html", null, true);
             echo "\">Update</a>
 \t\t\t\t\t\t\t\t\t\t\t
@@ -324,7 +326,7 @@ Management ";
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['m'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 225
+        // line 227
         echo "\t\t\t\t\t\t\t\t\t\t</table>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t<div class=\"box jplist-no-results text-shadow align-center\">
@@ -350,14 +352,14 @@ Management ";
 ";
     }
 
-    // line 247
+    // line 249
     public function block_javascripts($context, array $blocks = array())
     {
         echo " ";
         if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
             // asset "3e55ad2_0"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_3e55ad2_0") : $this->env->getExtension('assets')->getAssetUrl("_controller/js/3e55ad2_part_1.js");
-            // line 248
+            // line 250
             echo "<script src=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
             echo "\"></script>
@@ -371,7 +373,7 @@ Management ";
 ";
         }
         unset($context["asset_url"]);
-        // line 249
+        // line 251
         echo " ";
     }
 
@@ -387,6 +389,6 @@ Management ";
 
     public function getDebugInfo()
     {
-        return array (  375 => 249,  361 => 248,  354 => 247,  328 => 225,  318 => 221,  315 => 220,  310 => 218,  307 => 217,  302 => 216,  297 => 214,  293 => 213,  288 => 211,  284 => 209,  282 => 208,  277 => 206,  273 => 204,  269 => 203,  193 => 129,  190 => 128,  89 => 32,  76 => 21,  73 => 20,  60 => 12,  49 => 3,  46 => 2,  11 => 1,);
+        return array (  377 => 251,  363 => 250,  356 => 249,  330 => 227,  320 => 223,  317 => 222,  312 => 220,  309 => 219,  304 => 218,  299 => 216,  295 => 215,  290 => 213,  286 => 211,  284 => 210,  279 => 208,  275 => 206,  271 => 205,  193 => 129,  190 => 128,  89 => 32,  76 => 21,  73 => 20,  60 => 12,  49 => 3,  46 => 2,  11 => 1,);
     }
 }
