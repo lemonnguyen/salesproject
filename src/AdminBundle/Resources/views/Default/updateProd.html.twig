@@ -1,0 +1,115 @@
+{% extends 'AdminBundle::admin.html.twig' %} 
+
+{% block title %}Update Product {% endblock %} 
+
+{% block name %}
+<div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
+	<div class="page-header pull-left">
+		<div class="page-title">Update Product</div>
+	</div>
+	<ol class="breadcrumb page-breadcrumb pull-right">
+		<li><i class="fa fa-home"></i>&nbsp;<a href="{{ url('admin_homepage') }}">Home</a>&nbsp;&nbsp;
+			<i class="fa fa-angle-right"></i>&nbsp;&nbsp;
+		</li>
+		<li class="hidden"><a href="#">Product</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+		<li class="active">Product</li>
+	</ol>
+	<div class="clearfix"></div>
+</div>
+{% endblock %} 
+
+{% block body %}
+<div class="col-lg-6">
+	<div class="panel-body pan">
+		<div class="panel-body pan">
+			<form action="{{ path('admin_updateProdProcess', {'id': model.id }) }}" class="form-horizontal" method="post">
+				<div class="form-body pal">
+					<div class="form-group">
+						<label for="inputCode" class="col-md-3 control-label"> Product Code</label>
+						<div class="col-md-9">
+							<div class="input-icon right">
+								<input id="inputCode" type="text" name="inputCode" placeholder="" class="form-control" value="{{ model.code }}" />
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputName" class="col-md-3 control-label"> Product
+							Name</label>
+						<div class="col-md-9">
+							<div class="input-icon right">
+								<input id="inputName" type="text" name="inputName"
+									placeholder="" class="form-control" />
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputDesc" class="col-md-3 control-label"> Description</label>
+						<div class="col-md-9">
+							<div class="input-icon right">
+								<textarea id="inputDesc" rows="5" placeholder=""
+									name="inputDesc" class="form-control"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputStat" class="col-md-3 control-label"> Product
+							Status</label>
+						<div class="col-md-9">
+							<div class="input-icon right">
+								<input id="inputStat" type="text" name="inputStat"
+									placeholder="" class="form-control" />
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputBrand" class="col-md-3 control-label"> Product
+							Brand</label>
+						<div class="col-md-9">
+							<div class="input-icon right">
+								<input id="inputBrand" type="text" name="inputBrand"
+									placeholder="" class="form-control" />
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputMade" class="col-md-3 control-label"> Made in</label>
+						<div class="col-md-9">
+							<div class="input-icon right">
+								<input id="inputMade" type="text" name="inputMade"
+									placeholder="" class="form-control" />
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputPrice" class="col-md-3 control-label"> Product
+							Price</label>
+						<div class="col-md-9">
+							<div class="input-icon right">
+								<input id="inputPrice" type="text" name="inputPrice"
+									placeholder="" class="form-control" />
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputImg" class="col-md-3 control-label"> Product
+							Image</label>
+						<div class="col-md-9">
+							<div class="input-icon right">
+								<input id="inputImg" type="text" name="inputImg" placeholder=""
+									class="form-control" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-md-offset-5 col-md-6">
+						<a type="submit" class="btn btn-primary" name="submit"
+							href="{{ url('admin_viewProduct') }}">Back</a> 
+						<input type="submit" class="btn btn-primary" name="submit" value="Update Catalog" />
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}
