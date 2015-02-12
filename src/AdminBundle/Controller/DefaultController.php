@@ -104,14 +104,27 @@ class DefaultController extends Controller
     	$post = Request::createFromGlobals();
     	 
     	if ($post->request->has('submit')) {
+    		$inputCode = $post->request->get('inputCode');
     		$inputName = $post->request->get('inputName');
     		$inputDesc = $post->request->get('inputDesc');
+    		$inputStat = $post->request->get('inputStat');
+    		$inputBrand = $post->request->get('inputBrand');
+    		$inputMade = $post->request->get('inputMade');
+    		$inputPrice = $post->request->get('inputPrice');
+    		$inputImg = $post->request->get('inputImg');
     		 
     		$product = new TblProduct();
     		$product->setName($inputName);
-    		$product->setDescription($inputDesc);
-    		$product->setCreateDate(new \Datetime());
+    		$product->setDetail($inputDesc);
+    		$product->setCode($inputCode);
+    		$product->setMad($inputMade);
+    		$product->setBrand($inputBrand);
+    		$product->setImage($inputImg);
+    		$product->setPrice($inputPrice);
+    		$product->setMiniDetail($inputStat);
     		$product->setDelFlag(0);
+    		$product->setCreateDate(new \Datetime());
+    		
     
     		$em = $this->getDoctrine()->getManager();
     
