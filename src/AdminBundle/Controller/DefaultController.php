@@ -99,4 +99,67 @@ class DefaultController extends Controller
     	
     	return $this->redirect($this->generateUrl('admin_viewCatalog'));
     }
+    
+    public function insertProductAction() {
+    	$post = Request::createFromGlobals();
+    	 
+    	if ($post->request->has('submit')) {
+    		$inputName = $post->request->get('inputName');
+    		$inputDesc = $post->request->get('inputDesc');
+    		 
+    		$product = new TblProduct();
+    		$product->setName($inputName);
+    		$product->setDescription($inputDesc);
+    		$product->setCreateDate(new \Datetime());
+    		$product->setDelFlag(0);
+    
+    		$em = $this->getDoctrine()->getManager();
+    
+    		$em->persist($product);
+    		$em->flush();
+    	}
+    	 
+    	return $this->redirect($this->generateUrl('admin_viewCatalog'));
+    }
+    
+    public function updateProductAction($id) {
+    	$em = $this->getDoctrine()->getManager();
+    	$product = $em->getRepository('AdminBundle:TblProduct')->find($id);
+    	 
+    	return $this->render('AdminBundle:Default:updateProd.html.twig', array('page' => 'product', 'model' => $product));
+    }
+    
+    public function updateProdProcessAction($id) {
+    	$post = Request::createFromGlobals();
+    	 
+    	if ($post->request->has('submit')) {
+    		$inputName = $post->request->get('inputName');
+    		$inputDesc = $post->request->get('inputDesc');
+    
+    		$em = $this->getDoctrine()->getManager();
+    		$product = $em->getRepository('AdminBundle:TblProduct')->find($id);
+    
+    		$product->setName($inputName);
+    		$product->setDescription($inputDesc);
+    		$em->flush();
+    	}
+    	 
+    	return $this->redirect($this->generateUrl('admin_viewProduct'));
+    }
+    
+    public function changeProductDelAction($id) {
+    	echo($id);
+    	 
+    	$em = $this->getDoctrine()->getManager();
+    	$product = $em->getRepository('AdminBundle:TblProduct')->find($id);
+    	 
+    	if ($product->getDelFlag() == 0) {
+    		$product->setDelFlag('1');
+    	} else {
+    		$product->setDelFlag('0');
+    	}
+    	$em->flush();
+    	 
+    	return $this->redirect($this->generateUrl('admin_viewProduct'));
+    }
 }

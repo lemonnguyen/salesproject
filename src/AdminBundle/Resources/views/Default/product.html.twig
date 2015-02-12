@@ -199,15 +199,12 @@ Management {% endblock %} {% block name %}
 									</div>
 									<div class="box text-shadow">
 										<table class="demo-tbl col-md-12">
-											<!--<img/>-->
-                                            <td class="img"><img src="images/thumbs/autumn-1.jpg" alt="" title=""/></td>
-											<!--<item>1</item>-->
+											
 											{% for m in model %}
 											<tr class="tbl-item">
 												<!--<img/>-->
-												<td class="col-md-1">{{ m.id }}</td>
-												<!--<data></data>-->
-												<td class="td-block col-md-10"><p class="date">{{
+                                            	<td class="img"><img src="/images/product/{{ m.image }}" alt="" title=""/></td>
+												<td class="td-block col-md-9"><p class="date">{{
 														m.createDate|date("m/d/Y") }}</p>
 													<p class="title">{{ m.name }}</p>
 													<p class="desc">{{ m.detail }}</p></td>
