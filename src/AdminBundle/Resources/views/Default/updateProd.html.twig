@@ -33,12 +33,10 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="inputName" class="col-md-3 control-label"> Product
-							Name</label>
+						<label for="inputName" class="col-md-3 control-label"> Product Name</label>
 						<div class="col-md-9">
 							<div class="input-icon right">
-								<input id="inputName" type="text" name="inputName"
-									placeholder="" class="form-control" />
+								<input id="inputName" type="text" name="inputName" placeholder="" class="form-control" value="{{ model.name }}" />
 							</div>
 						</div>
 					</div>
@@ -46,28 +44,23 @@
 						<label for="inputDesc" class="col-md-3 control-label"> Description</label>
 						<div class="col-md-9">
 							<div class="input-icon right">
-								<textarea id="inputDesc" rows="5" placeholder=""
-									name="inputDesc" class="form-control"></textarea>
+								<textarea id="inputDesc" rows="5" placeholder="" name="inputDesc" class="form-control">{{ model.detail }}</textarea>
 							</div>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="inputStat" class="col-md-3 control-label"> Product
-							Status</label>
+						<label for="inputStat" class="col-md-3 control-label"> Product Status</label>
 						<div class="col-md-9">
 							<div class="input-icon right">
-								<input id="inputStat" type="text" name="inputStat"
-									placeholder="" class="form-control" />
+								<input id="inputStat" type="text" name="inputStat" placeholder="" class="form-control" value="{{ model.miniDetail }}" />
 							</div>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="inputBrand" class="col-md-3 control-label"> Product
-							Brand</label>
+						<label for="inputBrand" class="col-md-3 control-label"> Product Brand</label>
 						<div class="col-md-9">
 							<div class="input-icon right">
-								<input id="inputBrand" type="text" name="inputBrand"
-									placeholder="" class="form-control" />
+								<input id="inputBrand" type="text" name="inputBrand" placeholder="" class="form-control" value="{{ model.brand }}"/>
 							</div>
 						</div>
 					</div>
@@ -75,28 +68,24 @@
 						<label for="inputMade" class="col-md-3 control-label"> Made in</label>
 						<div class="col-md-9">
 							<div class="input-icon right">
-								<input id="inputMade" type="text" name="inputMade"
-									placeholder="" class="form-control" />
+								<input id="inputMade" type="text" name="inputMade" placeholder="" class="form-control" value="{{ model.mad }}" />
 							</div>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="inputPrice" class="col-md-3 control-label"> Product
-							Price</label>
+						<label for="inputPrice" class="col-md-3 control-label"> Product Price</label>
 						<div class="col-md-9">
 							<div class="input-icon right">
-								<input id="inputPrice" type="text" name="inputPrice"
-									placeholder="" class="form-control" />
+								<input id="inputPrice" type="text" name="inputPrice" placeholder="" class="form-control" value="{{ model.price }}" />
 							</div>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="inputImg" class="col-md-3 control-label"> Product
-							Image</label>
+						<label for="inputImg" class="col-md-3 control-label"> Product Image</label>
 						<div class="col-md-9">
+							<div class="img"><img src="/images/product/{{ model.image }}" alt="" title=""/></div>
 							<div class="input-icon right">
-								<input id="inputImg" type="text" name="inputImg" placeholder=""
-									class="form-control" />
+								<input id="inputImg" type="text" name="inputImg" placeholder="" class="form-control" value=""/>
 							</div>
 						</div>
 					</div>
