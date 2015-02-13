@@ -3,38 +3,38 @@ admin_homepage:
     defaults: { _controller: AdminBundle:Default:index }
 admin_viewCatalog:
     path:     /admin/catalog
-    defaults: { _controller: AdminBundle:Default:catalog }
+    defaults: { _controller: AdminBundle:Catalog:catalog }
 admin_viewProduct:
     path:     /admin/product
-    defaults: { _controller: AdminBundle:Default:product }
+    defaults: { _controller: AdminBundle:Product:product }
 admin_viewProCata:
     path:     /admin/procata
     defaults: { _controller: AdminBundle:Default:procata }
 admin_insertCatalog:
     path:     /admin/insertCatalog
-    defaults: { _controller: AdminBundle:Default:insertCatalog }
+    defaults: { _controller: AdminBundle:Catalog:insertCatalog }
 admin_updateCatalog:
     path:     /admin/updateCatalog/{id}
-    defaults: { _controller: AdminBundle:Default:updateCatalog }
+    defaults: { _controller: AdminBundle:Catalog:updateCatalog }
     methods: [GET]
 admin_updateCataProcess:
     path:     /admin/updateCatalog/{id}
-    defaults: { _controller: AdminBundle:Default:updateCataProcess }
+    defaults: { _controller: AdminBundle:Catalog:updateCataProcess }
     methods: [POST]
 admin_changeCatalogDel:
     path:     /admin/changeCatalogDel/{id}
-    defaults: { _controller: AdminBundle:Default:changeCatalogDel }
+    defaults: { _controller: AdminBundle:Catalog:changeCatalogDel }
 admin_insertProduct:
     path:     /admin/insertProduct
-    defaults: { _controller: AdminBundle:Default:insertProduct }
+    defaults: { _controller: AdminBundle:Product:insertProduct }
 admin_updateProduct:
     path:     /admin/updateProduct/{id}
-    defaults: { _controller: AdminBundle:Default:updateProduct }
+    defaults: { _controller: AdminBundle:Product:updateProduct }
     methods: [GET]
 admin_updateProdProcess:
     path:     /admin/updateProduct/{id}
-    defaults: { _controller: AdminBundle:Default:updateProdProcess }
+    defaults: { _controller: AdminBundle:Product:updateProdProcess }
     methods: [POST]
 admin_changeProductDel:
     path:     /admin/changeProductDel/{id}
-    defaults: { _controller: AdminBundle:Default:changeProductDel }
+    defaults: { _controller: AdminBundle:Product:changeProductDel }
