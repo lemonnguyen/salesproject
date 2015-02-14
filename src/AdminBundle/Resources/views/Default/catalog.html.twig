@@ -1,5 +1,8 @@
-{% extends 'AdminBundle::admin.html.twig' %} {% block title %}Catalog
-Management {% endblock %} {% block name %}
+{% extends 'AdminBundle::admin.html.twig' %}
+
+{% block title %}Catalog Management {% endblock %} 
+
+{% block name %}
 <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
 	<div class="page-header pull-left">
 		<div class="page-title">
@@ -17,7 +20,9 @@ Management {% endblock %} {% block name %}
 	</ol>
 	<div class="clearfix"></div>
 </div>
-{% endblock %} {% block modal %}
+{% endblock %} 
+
+{% block modal %}
 <!--BEGIN MODAL CONFIG PORTLET-->
 <div id="modal-config" class="modal fade">
 	<div class="modal-dialog">
@@ -136,12 +141,9 @@ Management {% endblock %} {% block name %}
 								</div>
 								<div class="box text-shadow">
 									<table class="demo-tbl col-md-12">
-										<!--<item>1</item>-->
 										{% for m in model %}
 										<tr class="tbl-item">
-											<!--<data></data>-->
-											<td class="td-block col-md-11"><p class="date">{{
-													m.createDate|date("m/d/Y") }}</p>
+											<td class="td-block col-md-11"><p class="date">{{ m.createDate|date("m/d/Y") }}</p>
 												<p class="title">{{ m.name }}</p>
 												<p class="desc">{{ m.description }}</p></td>
 											<td class="col-md-1">{% if m.delFlag == 0 %} <a
@@ -176,6 +178,10 @@ Management {% endblock %} {% block name %}
 		</div>
 	</div>
 </div>
-{% endblock %} {% block javascripts %} {% javascripts '@jplist_js' %}
-<script src="{{ asset_url }}"></script>
-{% endjavascripts %} {% endblock %}
+{% endblock %} 
+
+{% block javascripts %} 
+	{% javascripts '@jplist_js' %}
+		<script src="{{ asset_url }}"></script>
+	{% endjavascripts %} 
+{% endblock %}
