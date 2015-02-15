@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use AdminBundle\Entity\TblCatalog;
 use AdminBundle\Entity\TblProduct;
 
-class DefaultController extends Controller
+class ProductController extends Controller
 {
     public function productAction() {
     	$em = $this->getDoctrine()->getManager();

@@ -1,5 +1,8 @@
-{% extends 'AdminBundle::admin.html.twig' %} {% block title %}Product
-Management {% endblock %} {% block name %}
+{% extends 'AdminBundle::admin.html.twig' %} 
+
+{% block title %}Product Management {% endblock %} 
+
+{% block name %}
 <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
 	<div class="page-header pull-left">
 		<div class="page-title">
@@ -16,7 +19,9 @@ Management {% endblock %} {% block name %}
 	</ol>
 	<div class="clearfix"></div>
 </div>
-{% endblock %} {% block modal %}
+{% endblock %} 
+
+{% block modal %}
 <!--BEGIN MODAL CONFIG PORTLET-->
 <div id="modal-config" class="modal fade">
 	<div class="modal-dialog">
@@ -107,7 +112,9 @@ Management {% endblock %} {% block name %}
 	</div>
 </div>
 <!--END MODAL CONFIG PORTLET-->
-{% endblock %} {% block body %}
+{% endblock %} 
+
+{% block body %}
 <div class="col-lg-6">
 	<div class="panel-body pan"></div>
 </div>
@@ -130,14 +137,11 @@ Management {% endblock %} {% block name %}
 										<i class="fa fa-sort"></i>Actions
 									</div>
 									<div class="jplist-panel box panel-top">
-										<button type="button" data-control-type="reset"
-											data-control-name="reset" data-control-action="reset"
-											class="jplist-reset-btn btn btn-default">
-											Reset<i class="fa fa-share mls"></i>
+										<button type="button" data-control-type="reset" data-control-name="reset" data-control-action="reset"
+											class="jplist-reset-btn btn btn-default">Reset<i class="fa fa-share mls"></i>
 										</button>
 										<div data-control-type="drop-down" data-control-name="paging"
-											data-control-action="paging"
-											class="jplist-drop-down form-control">
+											data-control-action="paging" class="jplist-drop-down form-control">
 											<ul class="dropdown-menu">
 												<li><span data-number="3"> 3 per page</span></li>
 												<li><span data-number="5"> 5 per page</span></li>
@@ -145,19 +149,14 @@ Management {% endblock %} {% block name %}
 												<li><span data-number="all"> view all</span></li>
 											</ul>
 										</div>
-										<div data-control-type="drop-down" data-control-name="sort"
-											data-control-action="sort" data-datetime-format="{
-											month}/{day}/{year}" class="jplist-drop-down form-control">
+										<div data-control-type="drop-down" data-control-name="sort" 
+											 data-control-action="sort" data-datetime-format="{month}/{day}/{year}" class="jplist-drop-down form-control">
 											<ul class="dropdown-menu">
 												<li><span data-path="default">Sort by</span></li>
-												<li><span data-path=".title" data-order="asc"
-													data-type="text">Name A-Z</span></li>
-												<li><span data-path=".title" data-order="desc"
-													data-type="text">Name Z-A</span></li>
-												<li><span data-path=".desc" data-order="asc"
-													data-type="text">Description A-Z</span></li>
-												<li><span data-path=".desc" data-order="desc"
-													data-type="text">Description Z-A</span></li>
+												<li><span data-path=".title" data-order="asc" data-type="text">Name A-Z</span></li>
+												<li><span data-path=".title" data-order="desc" data-type="text">Name Z-A</span></li>
+												<li><span data-path=".desc" data-order="asc" data-type="text">Description A-Z</span></li>
+												<li><span data-path=".desc" data-order="desc" data-type="text">Description Z-A</span></li>
 											</ul>
 										</div>
 										<div class="text-filter-box">
@@ -210,9 +209,8 @@ Management {% endblock %} {% block name %}
 										<i class="fa fa-sort"></i>Actions
 									</div>
 									<div class="jplist-panel box panel-bottom">
-										<div data-control-type="pagination" data-control-name="paging"
-											data-control-action="paging"
-											data-control-animate-to-top="true" class="jplist-pagination"></div>
+										<div data-control-type="pagination" data-control-name="paging" data-control-action="paging" 
+											 data-control-animate-to-top="true" class="jplist-pagination"></div>
 									</div>
 								</div>
 							</div>
@@ -223,6 +221,10 @@ Management {% endblock %} {% block name %}
 		</div>
 	</div>
 </div>
-{% endblock %} {% block javascripts %} {% javascripts '@jplist_js' %}
-<script src="{{ asset_url }}"></script>
-{% endjavascripts %} {% endblock %}
+{% endblock %} 
+
+{% block javascripts %} 
+	{% javascripts '@jplist_js' %}
+	<script src="{{ asset_url }}"></script>
+	{% endjavascripts %} 
+{% endblock %}
