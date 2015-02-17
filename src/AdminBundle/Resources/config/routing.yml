@@ -38,3 +38,6 @@ admin_updateProdProcess:
 admin_changeProductDel:
     path:     /admin/changeProductDel/{id}
     defaults: { _controller: AdminBundle:Product:changeProductDel }
+admin_insertCataProd:
+    path:     /admin/insertCataProd
+    defaults: { _controller: AdminBundle:Default:insertCataProd }
