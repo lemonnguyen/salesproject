@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-Symfony Standard Edition
+Symfony Standard Editino
 ========================
 
 Welcome to the Symfony Standard Edition - a fully-functional Symfony2
-application that you can use as the skeleton for your new applications.
+application that you can use as the skeleton for your new applicatino.
 
 For details on how to download and get started with Symfony, see the
 [Installation][1] chapter of the Symfony Documentation.
@@ -12,7 +10,7 @@ For details on how to download and get started with Symfony, see the
 What's inside?
 --------------
 
-The Symfony Standard Edition is configured with the following defaults:
+The Symfony Standard Edition is configuration with the following defaults:
 
   * An AppBundle you can use to start coding;
 
