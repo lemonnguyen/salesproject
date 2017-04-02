@@ -1,4 +1,4 @@
-Symfony Standard Editino
+Symfony Standard Edition
 ========================
 
 Welcome to the Symfony Standard Edition - a fully-functional Symfony2
@@ -10,7 +10,7 @@ For details on how to download and get started with Symfony, see the
 What's inside?
 --------------
 
-The Symfony Standard Edition is configuration with the following defaults:
+The Symfony Standard Edition is configured with the following defaults:
 
   * An AppBundle you can use to start coding;
 
